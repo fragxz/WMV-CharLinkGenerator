@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WoW Model Viewer - Armory Link Generator</title>
+    <style>
+        html {
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to bottom right,#013c4a 0,#193e4c 44%,#004b5b 100%);
+            color: #fff;
+            font-family: GeoSlb712MdBT,Georgia,serif;
+            font-style: normal;
+        }
+		
+		.the-box  {
+			padding-top: 10%;
+			margin: auto;
+			width: 80%;
+			
+			text-align: center;
+		}
+		
+        .the-title {
+            padding:5px;
+                font-size: 3em;
+            text-align: center;
+        }
+		.WMVlink {
+			width: 800px;
+			margin: 10px 10px 10px 0;
+			background: transparent;
+			border: none;
+			border-bottom: 2px solid white;
+			font-size: 20px;
+			color: white;
+			text-align: center;
+		}
+		.WMVinput {
+			padding: 10px;
+			margin: 10px 10px 10px 0;
+			background: transparent;
+			border: none;
+			border-bottom: 2px solid white;
+			font-size: 20px;
+			color: white;
+		}
+		
+		.footer {
+			bottom: 0px;
+			position: absolute;
+			padding: 25px;
+		}
+		
+		a, a:visited, a:hover {
+			color: lightblue;
+		}
+    </style>
+	<script>
+	
+	function createLink() {
+		var nickname = document.getElementById("nickname").value;
+		var server = document.getElementById("server").value;
+		var region = document.getElementById("region").value;
+		var regionCode = '';
+		
+		if ( region == "EU" )
+		{
+			regionCode = "de-de";
+		}
+		else if ( region == "US" )
+		{
+			regionCode = "en-us";
+		}
+		
+		if ( ( nickname.length > 0 ) && ( server.length > 0 ) )
+		{
+			document.getElementById("WMVlink").value = "http://worldofwarcraft.com/" + regionCode + "/character/" + server + "/" + nickname;
+		}
+	}
+	
+
+	</script>
+  </head>
+  <body>
+    <div class="the-box">
+	
+	
+        <div class="the-title">
+		Enter your nickname and server</div>	<br /><br />
+		
+		<input type="text" id="nickname" placeholder="Nickname" oninput="createLink()" class="WMVinput">	<br />
+		<input type="text" id="server" placeholder="Server" oninput="createLink()" class="WMVinput">		<br />
+		Region: <select id="region" placeholder="Region" oninput="createLink()" class="WMVinput">
+		  <option value="EU">EU</option>
+		  <option value="US">US</option>
+		</select> 
+		
+		<br /><br /><br /><br /><br /><br />
+
+		Your WoW Model Viewer link: <br />
+		<input type="text" id="WMVlink" placeholder="" class="WMVlink"> <br />
+		<br />
+	</div>	
+    
+	<div class="footer">
+		Disclaimer: This page was updated at 2019/04/15 and worked with WoW 8.1.5 and WoW Model Viewer v0.9.0.beta12. If Blizzard decided to change their system in the meantime and if you encounter any problems, <a href="https://www.youtube.com/watch?v=gsX_pCEIUpw">please let me know</a>!
+	</div>
+  </body>
+</html>
