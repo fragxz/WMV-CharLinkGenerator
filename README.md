@@ -13,5 +13,6 @@ and it automatically generates the link for you to copy paste into "WoW Model Vi
 
 
 Link to the Generator live in action: http://wow.fragxz.de/
+
 Link to the Guide: https://www.youtube.com/watch?v=gsX_pCEIUpw
 
