@@ -16,3 +16,6 @@ Link to the Generator live in action: http://wow.fragxz.de/
 
 Link to the Guide: https://www.youtube.com/watch?v=gsX_pCEIUpw
 
+
+Share ♥ - If this project helped you, please consider supporting me!
+
